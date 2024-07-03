@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
-const useIsInViewport = (ref, options = {}) => {
-  const [isInViewport, setIsInViewport] = useState(false);
+export default function useIsInViewport(ref) {
+  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsInViewport(entry.isIntersecting);
-    }, options);
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
 
     if (ref.current) {
       observer.observe(ref.current);
@@ -17,9 +18,7 @@ const useIsInViewport = (ref, options = {}) => {
         observer.unobserve(ref.current);
       }
     };
-  }, [ref, options]);
+  }, [ref]);
 
-  return isInViewport;
-};
-
-export default useIsInViewport;
+  return isInView;
+}

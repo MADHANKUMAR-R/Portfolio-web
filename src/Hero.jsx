@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -38,28 +37,19 @@ export default function Hero() {
 
   return (
     <div
-      ref={heroRef}
-      className="h-screen flex flex-col justify-center items-center pt-20"
-      id="home"
+      className="flex flex-col items-center justify-center h-screen"
+      id="hero"
     >
-      <div className="text-center">
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={isInViewport ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+      <div className="flex flex-col gap-7 items-center justify-center">
+        <h1
+          className="text-2xl md:text-4xl font-bold text-white text-center"
+          ref={heroRef}
         >
-          <h1 className="text-white text-4xl font-semibold">
+          <RoughNotation type="box" show={show} animationDelay={300}>
             <span ref={typedRef} />
-          </h1>
-        </motion.div>
-        <motion.p
-          className="text-white mt-5 text-2xl max-w-full text-center"
-          initial={{ opacity: 0, x: -100 }}
-          animate={
-            isInViewport ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
-          }
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-        >
+          </RoughNotation>
+        </h1>
+        <p className="text-white md:text-2xl text-center mt-5">
           A seasoned
           <span className="gradient-text relative mx-2">
             <RoughNotation type="underline" color="#fff" show={show}>
@@ -70,49 +60,64 @@ export default function Hero() {
           <span className="block mt-1">
             digital experiences. Let’s create something amazing!
           </span>
-        </motion.p>
-      </div>
-      <div className="flex justify-center mt-10 gap-5">
-        <div className="bg-white p-4 rounded-full transform transition duration-300 hover:scale-110 hover:-translate-y-1">
-          <a
-            href="https://github.com/your-github-profile"
+        </p>
+        <div className="flex gap-7 mt-5">
+          <motion.a
+            href="https://github.com/example"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            className="text-white"
+            initial={{ opacity: 0, x: -100 }}
+            animate={
+              isInViewport ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+            }
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <TbBrandGithubFilled />
-          </a>
-        </div>
-        <div className="bg-white p-4 rounded-full transform transition duration-300 hover:scale-110 hover:-translate-y-1">
-          <a
-            href="mailto:your-email@gmail.com"
+            <TbBrandGithubFilled className="text-3xl" />
+          </motion.a>
+          <motion.a
+            href="mailto:example@example.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            className="text-white"
+            initial={{ opacity: 0, x: -100 }}
+            animate={
+              isInViewport ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+            }
+            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           >
-            <BiLogoGmail />
-          </a>
-        </div>
-        <div className="bg-white p-4 rounded-full transform transition duration-300 hover:scale-110 hover:-translate-y-1">
-          <a
-            href="https://www.linkedin.com/in/your-linkedin-profile"
+            <BiLogoGmail className="text-3xl" />
+          </motion.a>
+          <motion.a
+            href="https://linkedin.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            className="text-white"
+            initial={{ opacity: 0, x: -100 }}
+            animate={
+              isInViewport ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+            }
+            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
           >
-            <FaLinkedinIn />
-          </a>
-        </div>
-        <div className="bg-white p-4 rounded-full transform transition duration-300 hover:scale-110 hover:-translate-y-1">
-          <a
-            href="https://twitter.com/your-twitter-profile"
+            <FaLinkedinIn className="text-3xl" />
+          </motion.a>
+          <motion.a
+            href="https://twitter.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            className="text-white"
+            initial={{ opacity: 0, x: -100 }}
+            animate={
+              isInViewport ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+            }
+            transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
           >
-            <IoLogoTwitter />
-          </a>
+            <IoLogoTwitter className="text-3xl" />
+          </motion.a>
         </div>
-      </div>
-      <div className="my-16 animate-bounce">
-        <button className="text-[#000000] px-7 py-4 text-4xl font-extrabold bg-white rounded-full">
-          &darr;
+        <button className="flex flex-row custom-btn btn-9">
+          <p>Let's Connect</p>
+          <span>&rarr;</span>
         </button>
       </div>
     </div>

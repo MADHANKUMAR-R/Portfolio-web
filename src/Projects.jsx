@@ -24,7 +24,7 @@ export default function Projects() {
         </h1>
       </div>
 
-      <div className="flex mb-4 justify-evenly items-center gap-12 mt-12">
+      <div className="flex flex-wrap p-4 sm:p-0 mb-4 justify-evenly items-center gap-12 mt-12">
         <motion.div
           className="flex flex-col gap-5 w-80"
           initial={{ scale: 0 }}

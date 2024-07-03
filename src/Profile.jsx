@@ -28,11 +28,11 @@ export default function Profile() {
             About<span className="gradient-text"> Me</span>
           </RoughNotation>
         </h1>
-        <div className="flex mb-4 justify-around items-center    mt-12">
+        <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 sm:p-5 p-4 sm:p-0  justify-around items-start    mt-12">
           <motion.img
             src={img1}
             alt=""
-            className="h-80 w-80 rounded-md "
+            className="h-96 lg:h-80 md:h-92 w-80 py-2 rounded-lg shadow-lg object-cover rounded"
             ref={profileRef}
             initial={{ opacity: 0, y: 100 }}
             animate={
@@ -51,11 +51,11 @@ export default function Profile() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           >
             <p className="text-white mb-4 ">
-              <span className="block gradient-text text-xl font-bold mb-4">
+              <span className="block gradient-text  lg:text-xl font-bold mb-2">
                 {" "}
                 Hello! I'm Madhan, a passionate software developer from India.
               </span>
-              <span className="text-md font-semibold ">
+              <span className="text-sm md:text-sm lg:text-lg font-semibold ">
                 Currently, I am pursuing a degree in Computer Science
                 Engineering. My primary focus is on front-end development, where
                 I strive to create visually appealing and highly functional user
@@ -70,7 +70,7 @@ export default function Profile() {
                 a positive impact through my work.
               </span>
             </p>
-            <PrimaryButton onClick={handleBtnClick} classname="">
+            <PrimaryButton onClick={handleBtnClick} classname="text-center">
               View Resume
             </PrimaryButton>
           </motion.div>

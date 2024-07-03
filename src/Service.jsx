@@ -2,27 +2,26 @@
 import { CgCodeSlash } from "react-icons/cg";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { DiAppstore } from "react-icons/di";
-
+import { useRef } from "react";
 import useIsInViewport from "./useIsInViewport";
 import { RoughNotation } from "react-rough-notation";
 
-import { forwardRef } from "react";
-
-const Service = forwardRef((props, ref) => {
-  const isInViewport = useIsInViewport(ref);
+export default function Service() {
+  const serviceRef = useRef(null);
+  const isInViewport = useIsInViewport(serviceRef);
 
   return (
-    <div className="px-5 py-2 " id="services" ref={ref}>
+    <div className="px-5 py-2 " id="services" ref={serviceRef}>
       <div className="flex flex-col gap-5">
         <p className="font-medium text-sm text-center text-gray-500">
           SERVICES
         </p>
-        <h1 className="font-semibold text-3xl text-center text-white" ref={ref}>
+        <h1 className="font-semibold text-3xl text-center text-white">
           <RoughNotation type="box" show={isInViewport} animationDelay={500}>
             What <span className="gradient-text"> I do</span>
           </RoughNotation>
         </h1>
-        <div className="flex justify-around mt-8 items-center z-10">
+        <div className="flex flex-wrap md:flex-row gap-8 justify-around mt-8 items-center z-10">
           <div className="h-64 text-white w-80 p-5 rounded-md service-primary">
             <div className="rounded-full border border-white p-2 inline-block">
               <CgCodeSlash />
@@ -35,7 +34,7 @@ const Service = forwardRef((props, ref) => {
               users.
             </p>
           </div>
-          <div className="h-64 text-white w-80 p-5 rounded-md service-primary">
+          <div className="sm:h-64 h-72 text-white w-80 p-5 rounded-md service-primary">
             <div className="rounded-full border border-white p-2 inline-block">
               <MdOutlineDesignServices />
             </div>
@@ -62,6 +61,4 @@ const Service = forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
-
-export default Service;
+}
