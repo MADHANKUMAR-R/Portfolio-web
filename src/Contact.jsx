@@ -3,7 +3,7 @@
 import { BiMessageSquareCheck } from "react-icons/bi";
 import { RoughNotation } from "react-rough-notation";
 import useIsInViewport from "./useIsInViewport";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
@@ -94,7 +94,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="mt-16 pb-14" id="contact">
+    <div className="mt-16 pb-14 px-4 md:px-0" id="contact">
       <div className="flex flex-col gap-5">
         <p className="mt-10 font-medium text-sm text-center text-gray-500">
           GET IN TOUCH
@@ -107,32 +107,33 @@ export default function Contact() {
             Contact<span className="gradient-text"> Me</span>
           </RoughNotation>
         </h1>
-        <p>
+        <p className="text-white text-center md:text-left">
           I am currently open to full-time opportunities in front-end
           development
         </p>
         <motion.div
-          ref={contactRef}
           className="mt-5 z-10"
           initial={{ opacity: 0, y: 100 }}
           animate={isInViewport ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="service-primary flex  justify-evenly mx-24 p-5  rounded-lg">
-            <div className="flex flex-col text-white max-w-3xl">
-              <h1>Let's Work Together</h1>
-              <p>
+          <div className="service-primary flex flex-col md:flex-row justify-evenly md:mx-24 p-5 rounded-lg">
+            <div className="flex flex-col text-white max-w-3xl md:mr-5">
+              <h1 className="text-2xl font-bold mb-4">Let's Work Together</h1>
+              <p className="text-base">
                 Feel free to reach out if you are looking for a developer, have
                 a question, or are interested in building some cool stuff
                 together.
               </p>
             </div>
             <form
-              className="flex flex-col text-white w-96"
+              className="flex flex-col text-white w-full md:w-96 mt-5 md:mt-0"
               onSubmit={handleFormSubmit}
             >
               <div className="flex flex-col">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className="text-sm font-medium mb-2">
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -144,7 +145,9 @@ export default function Contact() {
                 />
               </div>
               <div className="flex flex-col mt-4">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name" className="text-sm font-medium mb-2">
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -156,7 +159,9 @@ export default function Contact() {
                 />
               </div>
               <div className="flex flex-col mt-4">
-                <label htmlFor="message">Your Message</label>
+                <label htmlFor="message" className="text-sm font-medium mb-2">
+                  Your Message
+                </label>
                 <textarea
                   className="placeholder-gradient bg-transparent border mt-2 border-[#ffffff] p-2 rounded-md"
                   placeholder="Type your message here."
@@ -166,7 +171,7 @@ export default function Contact() {
                   value={details.message}
                 />
               </div>
-              <button className="hover:scale-105 mt-5 max-w-60 transition duration-300 bg-[#02DAC5] text-black flex items-center justify-center gap-2 p-2 rounded-md">
+              <button className="hover:scale-105 mt-5 max-w-full transition duration-300 bg-[#02DAC5] text-black flex items-center justify-center gap-2 p-2 rounded-md">
                 Send Message
                 <BiMessageSquareCheck />
               </button>

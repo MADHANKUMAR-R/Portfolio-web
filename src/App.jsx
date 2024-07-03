@@ -34,7 +34,7 @@ export default function App() {
       <Service id="services" />
       <Projects id="projects" />
       <Profile id="profile" />
-      <Skills id="skills" />
+      {/* <Skills id="skills" /> */}
       <Contact id="contact" />
     </Scroll>
   );

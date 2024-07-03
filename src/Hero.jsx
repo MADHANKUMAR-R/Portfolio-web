@@ -37,10 +37,10 @@ export default function Hero() {
 
   return (
     <div
-      className="flex  flex-col items-center justify-center h-screen"
+      className="flex flex-col items-center justify-center h-screen"
       id="hero"
     >
-      <div className="flex flex-col  items-center justify-center">
+      <div className="flex flex-col space-y-7 items-center justify-center">
         <h1
           className="text-2xl md:text-4xl font-bold text-white text-center"
           ref={heroRef}
@@ -61,7 +61,7 @@ export default function Hero() {
             digital experiences. Let’s create something amazing!
           </span>
         </p>
-        <div className="flex gap-7 mt-5 mb-4">
+        <div className="flex gap-7">
           <motion.a
             href="https://github.com/example"
             target="_blank"
@@ -115,10 +115,15 @@ export default function Hero() {
             <IoLogoTwitter className="text-3xl" />
           </motion.a>
         </div>
-        <button className="flex mt-5 flex-row custom-btn btn-9">
+        <motion.button
+          className="flex flex-row custom-btn btn-9"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInViewport ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+        >
           <p>Let's Connect</p>
           <span>&rarr;</span>
-        </button>
+        </motion.button>
       </div>
     </div>
   );
