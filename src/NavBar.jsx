@@ -63,8 +63,10 @@ export default function NavBar({ handleClick }) {
         Madhan<span className="text-[#7fd0e8] text-3xl">.</span>
       </Logo>
       <NavLinks navLinks={navLinks} handleClick={handleClick} />
-      <PrimaryButton onClick={handleBtnClick} className="hidden">
-        View Resume
+      <PrimaryButton className="hidden">
+        <a href="https://drive.google.com/file/d/1BmQ7jix8EPYA8KitKT1ws-J7BQXBfDhA/view?usp=sharing">
+          View Resume
+        </a>
       </PrimaryButton>
     </motion.nav>
   );

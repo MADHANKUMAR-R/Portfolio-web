@@ -70,8 +70,10 @@ export default function Profile() {
                 a positive impact through my work.
               </span>
             </p>
-            <PrimaryButton onClick={handleBtnClick} classname="text-center">
-              View Resume
+            <PrimaryButton classname="text-center">
+              <a href="https://drive.google.com/file/d/1BmQ7jix8EPYA8KitKT1ws-J7BQXBfDhA/view?usp=sharing">
+                View Resume
+              </a>
             </PrimaryButton>
           </motion.div>
         </div>
