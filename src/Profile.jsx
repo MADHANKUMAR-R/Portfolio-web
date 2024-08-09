@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { LuWalletCards } from "react-icons/lu";
-import img1 from "./assets/profileimg.jpg";
+import img1 from "./assets/profileg.jpg";
 import useIsInViewport from "./useIsInViewport";
 import { useRef } from "react";
 import { RoughNotation } from "react-rough-notation";
@@ -32,7 +32,7 @@ export default function Profile() {
           <motion.img
             src={img1}
             alt=""
-            className="h-96 lg:h-80 md:h-92 w-80 py-2  rounded-lg shadow-lg object-cover rounded"
+            className="h-96 lg:h-80 md:h-96 w-80 py-2  rounded-lg shadow-lg  rounded"
             ref={profileRef}
             initial={{ opacity: 0, y: 100 }}
             animate={
