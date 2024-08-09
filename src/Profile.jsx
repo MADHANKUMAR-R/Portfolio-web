@@ -55,7 +55,7 @@ export default function Profile() {
                 {" "}
                 Hello! I'm Madhan, a passionate software developer from India.
               </span>
-              <span className="text-sm md:text-sm lg:text-lg font-semibold ">
+              <span className="text-sm md:text-sm lg:text-lg font-semibold">
                 Currently, I am pursuing a degree in Computer Science
                 Engineering. My primary focus is on front-end development, where
                 I strive to create visually appealing and highly functional user

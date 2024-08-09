@@ -1,4 +1,6 @@
-import Project1 from "./assets/image.png";
+import Project3 from "./assets/realestateg.jpg";
+import Project2 from "./assets/usepopcorng.png";
+import Project1 from "./assets/eatnsplitg.jpg";
 import "./index.css";
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -31,21 +33,29 @@ export default function Projects() {
           animate={isInViewport ? { scale: 1 } : { scale: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <div className=" rounded-md service-primary h-56 flex  justify-center items-center overflow-hidden relative group p-4">
+          <div className="rounded-md service-primary h-56 flex justify-center items-center overflow-hidden relative group p-4">
             <div className="relative h-full w-full overflow-hidden">
-              <img
-                src={Project1}
-                alt="Project"
-                className="absolute top-0 left-0 w-full h-auto transform translate-y-0 group-hover:translate-y-[-67%] transition-transform duration-500 ease-in-out"
-              />
+              <a
+                href="https://github.com/MADHANKUMAR-R/usepopcorn"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full h-full"
+              >
+                <img
+                  src={Project2}
+                  alt="Project"
+                  className="absolute top-0 left-0 w-full h-full "
+                />
+              </a>
             </div>
           </div>
+
           <div className="flex flex-col gap-2 mt-2">
-            <h1 className="text-white font-bold">Project Name</h1>
+            <h1 className="text-white font-bold">Usepopcorn Web</h1>
             <p className="text-gray-500 font-semibold">
-              Our site, built with Bootstrap, offers a responsive and
-              user-friendly shopping experience, making it easy for you to find
-              the perfect instrument.
+              A dynamic web app built with React and Tailwind CSS, offering
+              seamless API integration for accessing movie details and
+              user-friendly rating functionality
             </p>
           </div>
         </motion.div>
@@ -55,21 +65,29 @@ export default function Projects() {
           animate={isInViewport ? { scale: 1 } : { scale: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <div className=" rounded-md service-primary h-56 flex justify-center items-center overflow-hidden relative group p-4">
+          <div className="rounded-md service-primary h-56 flex justify-center items-center overflow-hidden relative group p-4">
             <div className="relative h-full w-full overflow-hidden">
-              <img
-                src={Project1}
-                alt="Project"
-                className="absolute top-0 left-0 w-full h-auto transform translate-y-0 group-hover:translate-y-[-67%] transition-transform duration-500 ease-in-out"
-              />
+              <a
+                href="https://github.com/MADHANKUMAR-R/eat-n-split"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full h-full"
+              >
+                <img
+                  src={Project1}
+                  alt="Project"
+                  className="absolute top-0 left-0 w-full h-auto transform translate-y-0 group-hover:translate-y-[-30%] transition-transform duration-500 ease-in-out"
+                />
+              </a>
             </div>
           </div>
+
           <div className="flex flex-col gap-2 mt-2">
-            <h1 className="text-white font-bold">Project Name</h1>
+            <h1 className="text-white font-bold">Eat-n-Split Web</h1>
             <p className="text-gray-500 font-semibold">
-              Our site, built with Bootstrap, offers a responsive and
-              user-friendly shopping experience, making it easy for you to find
-              the perfect instrument.
+              Created a React expense-sharing app facilitating bill splitting
+              among friends with dynamic balance tracking and user-friendly
+              interface.
             </p>
           </div>
         </motion.div>
@@ -79,21 +97,29 @@ export default function Projects() {
           animate={isInViewport ? { scale: 1 } : { scale: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <div className=" rounded-md service-primary  h-56 flex justify-center items-center overflow-hidden relative group p-4">
+          <div className="rounded-md service-primary h-56 flex justify-center items-center overflow-hidden relative group p-4">
             <div className="relative h-full w-full overflow-hidden">
-              <img
-                src={Project1}
-                alt="Project"
-                className="absolute top-0 left-0 w-full h-auto transform translate-y-0 group-hover:translate-y-[-67%] transition-transform duration-500 ease-in-out"
-              />
+              <a
+                href="https://github.com/MADHANKUMAR-R/Real-estate"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full h-full"
+              >
+                <img
+                  src={Project3}
+                  alt="Project"
+                  className="absolute top-0 left-0 w-full h-auto transform translate-y-0 group-hover:translate-y-[-63%] transition-transform duration-500 ease-in-out"
+                />
+              </a>
             </div>
           </div>
+
           <div className="flex flex-col gap-2 mt-2">
-            <h1 className="text-white font-bold">Project Name</h1>
+            <h1 className="text-white font-bold">Real Estate Web</h1>
             <p className="text-gray-500 font-semibold">
-              Our site, built with Bootstrap, offers a responsive and
-              user-friendly shopping experience, making it easy for you to find
-              the perfect instrument.
+              I created a real estate project using React and Tailwind CSS,
+              focusing on building a responsive and user-friendly interface to
+              display property listings and related details.
             </p>
           </div>
         </motion.div>

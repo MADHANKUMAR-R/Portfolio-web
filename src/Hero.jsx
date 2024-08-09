@@ -40,7 +40,7 @@ export default function Hero() {
       className="flex flex-col items-center justify-center h-screen"
       id="hero"
     >
-      <div className="flex flex-col space-y-7 items-center justify-center">
+      <div className="flex flex-col z-10 space-y-7 p-3 items-center justify-center">
         <h1
           className="text-2xl md:text-4xl font-bold text-white text-center"
           ref={heroRef}
@@ -49,7 +49,10 @@ export default function Hero() {
             <span ref={typedRef} />
           </RoughNotation>
         </h1>
-        <p className="text-white md:text-2xl text-center mt-5">
+        <p
+          className="text-white  text-lg md:text-2xl 
+         text-center mt-5"
+        >
           A seasoned
           <span className="gradient-text relative mx-2">
             <RoughNotation type="underline" color="#fff" show={show}>
@@ -63,20 +66,20 @@ export default function Hero() {
         </p>
         <div className="flex gap-7">
           <motion.a
-            href="https://github.com/example"
+            href="https://github.com/MADHANKUMAR-R"
             target="_blank"
             rel="noreferrer"
-            className="text-white"
+            className="text-white cursor-pointer"
             initial={{ opacity: 0, x: -100 }}
             animate={
               isInViewport ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
             }
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <TbBrandGithubFilled className="text-3xl" />
+            <TbBrandGithubFilled className="text-3xl " />
           </motion.a>
           <motion.a
-            href="mailto:example@example.com"
+            href="mailto:armadhankumar2122@gmail.com"
             target="_blank"
             rel="noreferrer"
             className="text-white"
@@ -89,7 +92,7 @@ export default function Hero() {
             <BiLogoGmail className="text-3xl" />
           </motion.a>
           <motion.a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/madhan-kumar-173566228"
             target="_blank"
             rel="noreferrer"
             className="text-white"
@@ -115,11 +118,19 @@ export default function Hero() {
             <IoLogoTwitter className="text-3xl" />
           </motion.a>
         </div>
+
         <motion.button
           className="flex flex-row custom-btn btn-9"
           initial={{ opacity: 0, y: 50 }}
           animate={isInViewport ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+          onClick={() =>
+            window.open(
+              "https://linkedin.com/in/madhan-kumar-173566228",
+              "_blank",
+              "noreferrer"
+            )
+          }
         >
           <p>Let's Connect</p>
           <span>&rarr;</span>

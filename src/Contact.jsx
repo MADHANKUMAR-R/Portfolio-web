@@ -107,10 +107,7 @@ export default function Contact() {
             Contact<span className="gradient-text"> Me</span>
           </RoughNotation>
         </h1>
-        <p className="text-white text-center md:text-left">
-          I am currently open to full-time opportunities in front-end
-          development
-        </p>
+
         <motion.div
           className="mt-5 z-10"
           initial={{ opacity: 0, y: 100 }}
