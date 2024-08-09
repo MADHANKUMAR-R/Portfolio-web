@@ -28,11 +28,11 @@ export default function Profile() {
             About<span className="gradient-text"> Me</span>
           </RoughNotation>
         </h1>
-        <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 sm:p-5 p-4 sm:p-0  justify-around items-start    mt-12">
+        <div className="flex  flex-col gap-2 sm:flex-row sm:gap-4 sm:p-5 p-4 sm:p-0  justify-around items-center    mt-12">
           <motion.img
             src={img1}
             alt=""
-            className="h-96 lg:h-80 md:h-92 w-80 py-2 rounded-lg shadow-lg object-cover rounded"
+            className="h-96 lg:h-80 md:h-92 w-80 py-2  rounded-lg shadow-lg object-cover rounded"
             ref={profileRef}
             initial={{ opacity: 0, y: 100 }}
             animate={
@@ -42,7 +42,7 @@ export default function Profile() {
           />
 
           <motion.div
-            className="flex flex-col max-w-3xl"
+            className="flex flex-col max-w-3xl text-center md:text-left"
             ref={profileRef}
             initial={{ opacity: 0, y: -100 }}
             animate={
